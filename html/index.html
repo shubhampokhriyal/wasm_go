@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+  <title>Wasm | SHA256</title>
+</head>
+
+<body>
+  <div class="container hide" id="main">
+    <h1>Web assembly SHA256 test</h1>
+
+    <!-- Check hash -->
+    <div class="input-container">
+      <input type="text" id="check" placeholder="Enter a value to get the hash">
+      <button id="check-button">Hash</button>
+    </div>
+    <div>
+      <p>
+        Hashed value:
+        <span id="hashed-value"></span>
+      </p>
+    </div>
+
+    <!-- Verify hash -->
+    <div class="input-container">
+      <input type="text" id="verify" placeholder="Check if it matches with the previously entered value">
+      <button id="verify-button">Verify</button>
+    </div>
+    <div>
+      <p>
+        Matched:
+        <span id="verified-value"></span>
+      </p>
+    </div>
+  </div>
+
+  <div id="loader"></div>
+  <!-- Scripts -->
+  <script src="wasm_exec.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
